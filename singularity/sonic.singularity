@@ -1,0 +1,7 @@
+Bootstrap: docker
+
+From: cmssw/cms:rhel7-latest
+
+%post
+    yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    yum install -y cmake3 gcc gcc-c++ make git openssl-devel opencv-devel rapidjson-devel wget perl-Data-Dumper patch openssl098e vim

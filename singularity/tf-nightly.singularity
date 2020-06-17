@@ -1,0 +1,12 @@
+Bootstrap: docker
+
+From: nvcr.io/nvidia/tensorflow:20.03-tf2-py3
+
+%post
+    pip install -U setGPU matplotlib mplhep sklearn pandas tqdm
+    pip install -U onnx tf2onnx
+%environment
+    PATH=/opt/local/conda/bin:$PATH
+
+%runscript
+    /bin/bash 
